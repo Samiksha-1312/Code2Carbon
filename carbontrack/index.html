@@ -1,0 +1,1196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CarbonTrack — Carbon Footprint Emission Assessment Platform</title>
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="An advanced data-driven assessment platform to measure, analyze, and optimize carbon footprint emissions. Clean environmental themes, interactive calculator, and sustainability reports.">
+    <meta name="keywords" content="carbon footprint, carbon emission, sustainability, greenhouse gases, climate change calculator, eco tracker">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Sora:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Header / Navigation Bar -->
+    <header class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="logo" id="nav-logo">
+                <svg class="logo-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 3.5 1 8.5C18.4 18 14.5 20 11 20z"></path>
+                    <path d="M19 2c-2.26 4.33-5.27 7.14-8 10"></path>
+                </svg>
+                <span>Carbon<span>Track</span></span>
+            </a>
+            
+            <nav class="nav-menu" id="nav-menu">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#methodology" class="nav-link">Methodology</a>
+                <a href="#features" class="nav-link">Features</a>
+                <a href="calculator.html" class="nav-link">Calculator</a>
+                <a href="#planner" class="nav-link">Planner</a>
+                <a href="#privacy" class="nav-link">Privacy</a>
+                <a href="#login" class="nav-btn-login-mobile">Login</a>
+            </nav>
+
+            <div class="nav-actions">
+                <a href="#login" class="btn-login-nav" id="login-nav-trigger">Login</a>
+                <button class="hamburger-toggle" id="hamburger-toggle" aria-label="Toggle Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section" id="home">
+        <div class="hero-bg-overlay"></div>
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-tagline">
+                    <span class="pulse-dot"></span> Institutional Sustainability Platform
+                </div>
+                <h1 class="hero-title">Measure, Report &<br><span class="highlight-text">Reduce Carbon Emissions</span></h1>
+                <p class="hero-subtitle">
+                    CarbonTrack helps educational institutions measure, analyze, and report Scope 1, 2, and 3 greenhouse gas emissions using internationally recognized methodologies. Build carbon inventories, unlock actionable insights, and progress toward net-zero goals from a single platform.
+                </p>
+                <div class="hero-badges">
+                    <div class="hero-badge-pill">
+                        <svg class="badge-check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                        <span>ISO 14064-1</span>
+                    </div>
+                    <div class="hero-badge-pill">
+                        <svg class="badge-check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                        <span>GHG Protocol</span>
+                    </div>
+                    <div class="hero-badge-pill">
+                        <svg class="badge-check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                        <span>Scope 1 · 2 · 3</span>
+                    </div>
+                    <div class="hero-badge-pill">
+                        <svg class="badge-check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                        <span>CO₂e Reporting</span>
+                    </div>
+                </div>
+                <div class="hero-ctas">
+                    <a href="calculator.html" class="btn btn-primary">
+                        <span>Explore Platform</span>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                    </a>
+                    <a href="#methodology" class="btn btn-secondary">View Methodology</a>
+                </div>
+            </div>
+            
+            <!-- Graphic Container with Interactive Eco-Scene -->
+            <div class="hero-visual">
+                <div class="glass-scene-card">
+                    <svg class="eco-illustration" viewBox="0 0 500 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Sky Background & Clouds -->
+                        <g class="sky-elements">
+                            <path class="cloud-1" d="M80 120 C 100 120, 110 100, 130 105 C 145 108, 150 125, 130 135 C 110 140, 90 140, 80 130 Z" fill="white" fill-opacity="0.6"/>
+                            <path class="cloud-2" d="M360 80 C 375 80, 385 70, 400 75 C 410 78, 415 90, 400 100 C 385 105, 370 105, 360 95 Z" fill="white" fill-opacity="0.4"/>
+                        </g>
+
+                        <!-- Glowing Sun -->
+                        <circle cx="250" cy="250" r="160" stroke="url(#sun-glow)" stroke-width="1.5" stroke-dasharray="10 15" class="sun-orbit"/>
+                        <circle cx="250" cy="250" r="120" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+                        
+                        <!-- Stylized Earth Core -->
+                        <g class="earth-group">
+                            <circle cx="250" cy="250" r="90" fill="url(#earth-gradient)" class="earth-core"/>
+                            <!-- Landmasses -->
+                            <path d="M210 200 C 230 180, 260 190, 270 210 C 280 230, 310 220, 320 250 C 330 280, 290 320, 260 330 C 230 340, 200 310, 190 280 C 180 250, 190 220, 210 200 Z" fill="#6EE7B7" fill-opacity="0.3" class="earth-land"/>
+                            <path d="M250 170 C 265 170, 275 165, 280 175 C 275 190, 245 195, 235 185 Z" fill="#6EE7B7" fill-opacity="0.35" class="earth-land"/>
+                            <!-- Earth atmosphere ring -->
+                            <circle cx="250" cy="250" r="95" stroke="#60A5FA" stroke-width="2" stroke-opacity="0.4" fill="none"/>
+                        </g>
+
+                        <!-- Eco-Grid Objects -->
+                        <!-- Wind Turbine 1 (Left) -->
+                        <g class="turbine" transform="translate(130, 210)">
+                            <line x1="0" y1="0" x2="0" y2="80" stroke="#E2E8F0" stroke-width="3" stroke-linecap="round"/>
+                            <g class="blades">
+                                <circle cx="0" cy="0" r="4" fill="#64748B"/>
+                                <path d="M0 0 L0 -45 L3 -22 Z" fill="#94A3B8"/>
+                                <path d="M0 0 L39 22 L16 31 Z" fill="#94A3B8"/>
+                                <path d="M0 0 L-39 22 L-30 -10 Z" fill="#94A3B8"/>
+                            </g>
+                        </g>
+                        
+                        <!-- Wind Turbine 2 (Right) -->
+                        <g class="turbine fast" transform="translate(370, 230)">
+                            <line x1="0" y1="0" x2="0" y2="60" stroke="#E2E8F0" stroke-width="2" stroke-linecap="round"/>
+                            <g class="blades">
+                                <circle cx="0" cy="0" r="3" fill="#64748B"/>
+                                <path d="M0 0 L0 -35 L2 -17 Z" fill="#94A3B8"/>
+                                <path d="M0 0 L30 17 L12 24 Z" fill="#94A3B8"/>
+                                <path d="M0 0 L-30 17 L-23 -8 Z" fill="#94A3B8"/>
+                            </g>
+                        </g>
+
+                        <!-- Swaying Trees -->
+                        <g class="tree tree-left" transform="translate(180, 290)">
+                            <path d="M0 0 L0 30" stroke="#78350F" stroke-width="3"/>
+                            <path d="M-15 0 C -25 -10, -15 -35, 0 -35 C 15 -35, 25 -10, 15 0 Z" fill="#10B981" fill-opacity="0.85"/>
+                            <path d="M-8 -5 C -15 -12, -10 -25, 0 -25 C 10 -25, 15 -12, 8 -5 Z" fill="#34D399" fill-opacity="0.8"/>
+                        </g>
+                        
+                        <g class="tree tree-right" transform="translate(310, 300)">
+                            <path d="M0 0 L0 25" stroke="#78350F" stroke-width="2"/>
+                            <path d="M-12 0 C -20 -8, -12 -28, 0 -28 C 12 -28, 20 -8, 12 0 Z" fill="#047857" fill-opacity="0.85"/>
+                            <path d="M-6 -4 C -12 -10, -8 -20, 0 -20 C 8 -20, 12 -10, 6 -4 Z" fill="#059669" fill-opacity="0.8"/>
+                        </g>
+
+                        <!-- Solar Panels -->
+                        <g class="solar-panel" transform="translate(230, 340)">
+                            <rect x="0" y="0" width="40" height="20" rx="2" transform="skewX(-15)" fill="#1E3A8A" stroke="#E2E8F0" stroke-width="1.5"/>
+                            <line x1="10" y1="0" x2="30" y2="20" stroke="#3B82F6" stroke-width="1" transform="skewX(-15)"/>
+                            <line x1="20" y1="0" x2="10" y2="20" stroke="#3B82F6" stroke-width="1" transform="skewX(-15)"/>
+                            <line x1="0" y1="10" x2="40" y2="10" stroke="#3B82F6" stroke-width="1" transform="skewX(-15)"/>
+                            <line x1="20" y1="20" x2="20" y2="35" stroke="#475569" stroke-width="2.5"/>
+                        </g>
+
+                        <!-- Animated Leaves floating -->
+                        <path class="leaf-particle l1" d="M80 340 C90 330, 105 330, 110 345 C100 355, 85 350, 80 340 Z" fill="#10B981" fill-opacity="0.7"/>
+                        <path class="leaf-particle l2" d="M410 350 C420 340, 435 345, 438 355 C428 365, 415 360, 410 350 Z" fill="#34D399" fill-opacity="0.6"/>
+
+                        <!-- Gradients definition -->
+                        <defs>
+                            <radialGradient id="sun-glow" cx="50%" cy="50%" r="50%">
+                                <stop offset="0%" stop-color="#34D399" stop-opacity="0.3"/>
+                                <stop offset="60%" stop-color="#3B82F6" stop-opacity="0.1"/>
+                                <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+                            </radialGradient>
+                            <linearGradient id="earth-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#065F46"/>
+                                <stop offset="50%" stop-color="#047857"/>
+                                <stop offset="100%" stop-color="#1E3A8A"/>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Standards Section -->
+    <section class="standards-section">
+        <div class="container">
+            <div class="standards-header text-center">
+                <span class="standards-label">Built on Internationally Trusted Standards</span>
+            </div>
+            
+            <div class="standards-grid">
+                <!-- Standard 1 -->
+                <div class="standard-card">
+                    <div class="standard-icon-box">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" class="standard-icon">
+                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                        </svg>
+                    </div>
+                    <h3>ISO 14064-1</h3>
+                    <p>GHG quantification & reporting standard</p>
+                </div>
+                
+                <!-- Standard 2 -->
+                <div class="standard-card">
+                    <div class="standard-icon-box">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" class="standard-icon">
+                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                        </svg>
+                    </div>
+                    <h3>GHG Protocol</h3>
+                    <p>Corporate accounting & reporting standard</p>
+                </div>
+                
+                <!-- Standard 3 -->
+                <div class="standard-card">
+                    <div class="standard-icon-box">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" class="standard-icon">
+                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                        </svg>
+                    </div>
+                    <h3>IPCC Guidelines</h3>
+                    <p>National GHG inventory methodologies</p>
+                </div>
+                
+                <!-- Standard 4 -->
+                <div class="standard-card">
+                    <div class="standard-icon-box">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" class="standard-icon">
+                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                        </svg>
+                    </div>
+                    <h3>Govt. Emission Factors</h3>
+                    <p>Regionally verified CO₂e coefficients</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Carbon Footprint Section -->
+    <section class="about-section" id="about">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-label">Understanding Emissions</span>
+                <h2 class="section-title">Why CarbonTrack?</h2>
+                <div class="title-bar"></div>
+                <p class="section-desc">
+                   CarbonTrack enables educational institutions to measure, analyze, and report greenhouse gas emissions in accordance with internationally recognized standards. By converting activity data into CO₂e emissions and categorizing them into Scope 1, Scope 2, and Scope 3, the platform helps organizations understand their environmental impact and identify opportunities for emission reduction.
+                </p>
+            </div>
+
+            <div class="grid grid-3">
+                <!-- Card 1 -->
+                <div class="card about-card scroll-reveal">
+                    <div class="card-icon-container">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="card-icon green">
+                            <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                            <polyline points="2 17 12 22 22 17"></polyline>
+                            <polyline points="2 12 12 17 22 12"></polyline>
+                        </svg>
+                    </div>
+                    <h3>Institutional Data Collection</h3>
+                    <p>Centralize electricity, diesel, petrol, LPG, water, paper, waste, refrigerant, and business-travel data from every department in one secure ledger.</p>
+                </div>
+                
+                <!-- Card 2 -->
+                <div class="card about-card scroll-reveal">
+                    <div class="card-icon-container">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="card-icon blue">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="2" y1="12" x2="22" y2="12"></line>
+                            <line x1="12" y1="2" x2="12" y2="22"></line>
+                            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                        </svg>
+                    </div>
+                    <h3>Standards-Based Assessment</h3>
+                    <p>Convert activity data into precise CO₂e emissions using ISO 14064-1, the GHG Protocol, IPCC guidelines, and government-published emission factors.</p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="card about-card scroll-reveal">
+                    <div class="card-icon-container">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="card-icon emerald">
+                            <path d="M3 3v18h18"></path>
+                            <polyline points="18.7 8 13.7 13 10.9 10.2 7 14.3"></polyline>
+                        </svg>
+                    </div>
+                    <h3>Actionable Reporting</h3>
+                    <p>Generate scope-wise carbon inventories, executive dashboards, and audit-ready reports aligned to net-zero and sustainability disclosure frameworks.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-header text-center">
+                <span class="stats-label">Platform at a Glance</span>
+                <h2 class="stats-title">Built for institutional scale</h2>
+                <p class="stats-desc">Structured to handle the complexity of educational institutions — from single-campus colleges to multi-campus universities.</p>
+            </div>
+            
+            <div class="stats-grid">
+                <!-- Stat 1 -->
+                <div class="stat-card scroll-reveal">
+                    <div class="stat-number">3</div>
+                    <div class="stat-text">Emission Scopes Covered</div>
+                </div>
+                
+                <!-- Stat 2 -->
+                <div class="stat-card scroll-reveal">
+                    <div class="stat-number">20+</div>
+                    <div class="stat-text">Emission Categories</div>
+                </div>
+                
+                <!-- Stat 3 -->
+                <div class="stat-card scroll-reveal">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-text">Standards Based</div>
+                </div>
+                
+                <!-- Stat 4 -->
+                <div class="stat-card scroll-reveal">
+                    <div class="stat-number">24/7</div>
+                    <div class="stat-text">Data Access</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Net-Zero Transition Planner & Forecast Section -->
+    <section class="planner-section" id="planner">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-label">Decarbonization Pathway</span>
+                <h2 class="section-title">Net-Zero Transition Hub</h2>
+                <div class="title-bar"></div>
+                <p class="section-desc">
+                    Simulate your path to sustainability. Toggle specific green initiatives to see their direct CapEx cost, payback time, and aggregate impact on your 10-year carbon emissions forecast.
+                </p>
+            </div>
+
+            <div class="planner-wrapper">
+                <!-- Left: Checklist of Initiatives -->
+                <div class="planner-initiatives">
+                    <h3 class="planner-subtitle">Select Mitigation Initiatives</h3>
+                    <div class="initiatives-list">
+                        
+                        <!-- Initiative 1 -->
+                        <label class="initiative-card glass-card" for="init-solar">
+                            <div class="initiative-header">
+                                <input type="checkbox" id="init-solar">
+                                <span class="custom-checkbox"></span>
+                                <div class="initiative-title-box">
+                                    <h4>Solar Rooftop Array (50 kW)</h4>
+                                    <span class="init-scope-badge scope2">Scope 2</span>
+                                </div>
+                            </div>
+                            <p class="initiative-desc">Install on-site photovoltaic solar panels to offset grid electricity consumption.</p>
+                            <div class="initiative-meta">
+                                <span><strong>Est. CapEx:</strong> $45,000</span>
+                                <span><strong>Payback:</strong> ~5 Years</span>
+                                <span class="savings-text"><strong>Impact:</strong> -30% Electricity</span>
+                            </div>
+                        </label>
+
+                        <!-- Initiative 2 -->
+                        <label class="initiative-card glass-card" for="init-ev">
+                            <div class="initiative-header">
+                                <input type="checkbox" id="init-ev">
+                                <span class="custom-checkbox"></span>
+                                <div class="initiative-title-box">
+                                    <h4>EV Campus Fleet Transition</h4>
+                                    <span class="init-scope-badge scope1">Scope 1</span>
+                                </div>
+                            </div>
+                            <p class="initiative-desc">Replace gasoline and diesel shuttle buses and facilities vehicles with electric models.</p>
+                            <div class="initiative-meta">
+                                <span><strong>Est. CapEx:</strong> $60,000</span>
+                                <span><strong>Payback:</strong> ~6 Years</span>
+                                <span class="savings-text"><strong>Impact:</strong> -80% Fleet Fuel</span>
+                            </div>
+                        </label>
+
+                        <!-- Initiative 3 -->
+                        <label class="initiative-card glass-card" for="init-led">
+                            <div class="initiative-header">
+                                <input type="checkbox" id="init-led">
+                                <span class="custom-checkbox"></span>
+                                <div class="initiative-title-box">
+                                    <h4>LED Lighting & HVAC Retrofit</h4>
+                                    <span class="init-scope-badge scope2">Scope 2</span>
+                                </div>
+                            </div>
+                            <p class="initiative-desc">Upgrade campus buildings to smart LED fixtures and energy-efficient HVAC units.</p>
+                            <div class="initiative-meta">
+                                <span><strong>Est. CapEx:</strong> $15,000</span>
+                                <span><strong>Payback:</strong> ~3.5 Years</span>
+                                <span class="savings-text"><strong>Impact:</strong> -15% Electricity</span>
+                            </div>
+                        </label>
+
+                        <!-- Initiative 4 -->
+                        <label class="initiative-card glass-card" for="init-waste">
+                            <div class="initiative-header">
+                                <input type="checkbox" id="init-waste">
+                                <span class="custom-checkbox"></span>
+                                <div class="initiative-title-box">
+                                    <h4>Zero-Waste Composting & Recycling</h4>
+                                    <span class="init-scope-badge scope3">Scope 3</span>
+                                </div>
+                            </div>
+                            <p class="initiative-desc">Establish on-campus waste composting and enhanced recycling flow systems.</p>
+                            <div class="initiative-meta">
+                                <span><strong>Est. CapEx:</strong> $8,000</span>
+                                <span><strong>Payback:</strong> ~2 Years</span>
+                                <span class="savings-text"><strong>Impact:</strong> -60% Waste</span>
+                            </div>
+                        </label>
+
+                        <!-- Initiative 5 -->
+                        <label class="initiative-card glass-card" for="init-paper">
+                            <div class="initiative-header">
+                                <input type="checkbox" id="init-paper">
+                                <span class="custom-checkbox"></span>
+                                <div class="initiative-title-box">
+                                    <h4>Paperless Campus Transition</h4>
+                                    <span class="init-scope-badge scope3">Scope 3</span>
+                                </div>
+                            </div>
+                            <p class="initiative-desc">Transition to 100% digital administration, exams, and paperless class materials.</p>
+                            <div class="initiative-meta">
+                                <span><strong>Est. CapEx:</strong> $3,000</span>
+                                <span><strong>Payback:</strong> ~1 Year</span>
+                                <span class="savings-text"><strong>Impact:</strong> -90% Paper</span>
+                            </div>
+                        </label>
+
+                    </div>
+                </div>
+
+                <!-- Right: 10-Year Trajectory SVG Chart and Summary KPIs -->
+                <div class="planner-chart-card glass-card">
+                    <div class="planner-chart-header">
+                        <h3>10-Year Decarbonization Trajectory</h3>
+                        <p>Simulated pathway vs. Business-As-Usual (BAU) (+1.5%/yr expansion)</p>
+                    </div>
+
+                    <!-- Forecast KPI Summary Row -->
+                    <div class="planner-kpis">
+                        <div class="planner-kpi">
+                            <span class="kpi-label">Simulated Reduction</span>
+                            <div class="kpi-value-wrapper text-emerald">
+                                <span class="kpi-num" id="planner-reduction-tons">0.00</span>
+                                <span class="kpi-unit">tCO₂e/yr</span>
+                            </div>
+                        </div>
+                        <div class="planner-kpi">
+                            <span class="kpi-label">Reduction Percentage</span>
+                            <div class="kpi-value-wrapper text-emerald">
+                                <span class="kpi-num" id="planner-reduction-pct">0</span>
+                                <span class="kpi-unit">%</span>
+                            </div>
+                        </div>
+                        <div class="planner-kpi">
+                            <span class="kpi-label">Cumulative CapEx</span>
+                            <div class="kpi-value-wrapper">
+                                <span class="kpi-unit">$</span>
+                                <span class="kpi-num" id="planner-total-capex">0</span>
+                            </div>
+                        </div>
+                        <div class="planner-kpi">
+                            <span class="kpi-label">Est. Payback Period</span>
+                            <div class="kpi-value-wrapper">
+                                <span class="kpi-num" id="planner-avg-payback">0.0</span>
+                                <span class="kpi-unit">years</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Forecast SVG Graph -->
+                    <div class="forecast-chart-container">
+                        <div class="y-axis-labels-forecast">
+                            <span class="y-label-max" id="forecast-y-max">120t</span>
+                            <span class="y-label-mid2" id="forecast-y-mid2">80t</span>
+                            <span class="y-label-mid1" id="forecast-y-mid1">40t</span>
+                            <span class="y-label-min" id="forecast-y-min">0t</span>
+                        </div>
+                        
+                        <div class="forecast-chart-wrapper" id="forecast-chart-wrapper">
+                            <svg class="forecast-chart-svg" viewBox="0 0 500 250" preserveAspectRatio="none">
+                                <defs>
+                                    <linearGradient id="forecast-grad-emerald" x1="0" y1="0" x2="0" y2="1">
+                                        <stop offset="0%" stop-color="#10B981" stop-opacity="0.35"/>
+                                        <stop offset="100%" stop-color="#10B981" stop-opacity="0.0"/>
+                                    </linearGradient>
+                                    <linearGradient id="forecast-grad-grey" x1="0" y1="0" x2="0" y2="1">
+                                        <stop offset="0%" stop-color="#ef4444" stop-opacity="0.1"/>
+                                        <stop offset="100%" stop-color="#ef4444" stop-opacity="0.0"/>
+                                    </linearGradient>
+                                </defs>
+                                
+                                <!-- Grid Lines -->
+                                <line x1="0" y1="0" x2="500" y2="0" class="chart-grid-line-svg" />
+                                <line x1="0" y1="62.5" x2="500" y2="62.5" class="chart-grid-line-svg" />
+                                <line x1="0" y1="125" x2="500" y2="125" class="chart-grid-line-svg" />
+                                <line x1="0" y1="187.5" x2="500" y2="187.5" class="chart-grid-line-svg" />
+                                <line x1="0" y1="250" x2="500" y2="250" class="chart-grid-line-svg" />
+                                
+                                <!-- Target Net-Zero Indicator line -->
+                                <line x1="0" y1="230" x2="500" y2="230" class="chart-net-zero-line" stroke-dasharray="5 5" />
+                                
+                                <!-- Baseline BAU Area and Path -->
+                                <path id="chart-path-bau-area" d="" fill="url(#forecast-grad-grey)" />
+                                <path id="chart-path-bau" d="" fill="none" stroke="#ef4444" stroke-width="2.5" stroke-dasharray="6 4" />
+
+                                <!-- Decarbonization Area and Path -->
+                                <path id="chart-path-decarb-area" d="" fill="url(#forecast-grad-emerald)" />
+                                <path id="chart-path-decarb" d="" fill="none" stroke="#10B981" stroke-width="3.5" />
+                            </svg>
+                        </div>
+                    </div>
+
+                    <!-- X Axis Labels -->
+                    <div class="forecast-x-axis">
+                        <span>2026</span>
+                        <span>2028</span>
+                        <span>2030</span>
+                        <span>2032</span>
+                        <span>2034</span>
+                        <span>2036</span>
+                    </div>
+
+                    <!-- Chart Legend -->
+                    <div class="forecast-legend">
+                        <div class="legend-item">
+                            <span class="legend-line line-bau"></span>
+                            <span>Business-As-Usual (BAU) baseline</span>
+                        </div>
+                        <div class="legend-item">
+                            <span class="legend-line line-decarb"></span>
+                            <span>Projected Decarbonization Pathway</span>
+                        </div>
+                        <div class="legend-item">
+                            <span class="legend-line line-target"></span>
+                            <span>Net-Zero Benchmark Alignment</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dashboard Section -->
+    <section class="dashboard-section" id="dashboard">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-label">Live Dashboard</span>
+                <h2 class="section-title">See your entire carbon inventory at a glance</h2>
+                <div class="title-bar"></div>
+                <p class="section-desc">A preview of the CarbonTrack analytics dashboard — real-time KPIs, scope-wise breakdowns, and monthly emissions trends.</p>
+            </div>
+            
+            <div class="dashboard-frame scroll-reveal">
+                <!-- Dashboard Top Header -->
+                <div class="dashboard-top">
+                    <div class="dashboard-title-box">
+                        <h3>FY 2025-26 Carbon Inventory</h3>
+                        <p>Auto-refreshed — Aligned to GHG Protocol</p>
+                    </div>
+                    <div class="dashboard-status">
+                        <span class="live-dot"></span>
+                        <span>Live Data</span>
+                    </div>
+                </div>
+                
+                <!-- KPI Row -->
+                <div class="kpi-grid">
+                    <!-- KPI 1 -->
+                    <div class="kpi-card">
+                        <span class="kpi-title">Total CO₂e</span>
+                        <h4 class="kpi-value">824 t</h4>
+                        <span class="kpi-change decrease">
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 18 13.5 8.5 8.5 13.5 1 6"></polyline><polyline points="17 18 23 18 23 12"></polyline></svg>
+                            12.4% vs LY
+                        </span>
+                    </div>
+                    <!-- KPI 2 -->
+                    <div class="kpi-card">
+                        <span class="kpi-title"><span class="color-indicator scope1"></span>Scope 1</span>
+                        <h4 class="kpi-value">231 t</h4>
+                        <span class="kpi-change increase">
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline></svg>
+                            8.1% vs LY
+                        </span>
+                    </div>
+                    <!-- KPI 3 -->
+                    <div class="kpi-card">
+                        <span class="kpi-title"><span class="color-indicator scope2"></span>Scope 2</span>
+                        <h4 class="kpi-value">387 t</h4>
+                        <span class="kpi-change decrease">
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 18 13.5 8.5 8.5 13.5 1 6"></polyline><polyline points="17 18 23 18 23 12"></polyline></svg>
+                            15.3% vs LY
+                        </span>
+                    </div>
+                    <!-- KPI 4 -->
+                    <div class="kpi-card">
+                        <span class="kpi-title"><span class="color-indicator scope3"></span>Scope 3</span>
+                        <h4 class="kpi-value">206 t</h4>
+                        <span class="kpi-change decrease">
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 18 13.5 8.5 8.5 13.5 1 6"></polyline><polyline points="17 18 23 18 23 12"></polyline></svg>
+                            4.7% vs LY
+                        </span>
+                    </div>
+                </div>
+                
+                <!-- Charts Grid -->
+                <div class="charts-grid">
+                    <!-- Donut Chart Card -->
+                    <div class="chart-card">
+                        <div class="chart-header">
+                            <h5>Emissions by Scope</h5>
+                            <p>Share of total tCO₂e</p>
+                        </div>
+                        <div class="donut-chart-container">
+                            <div class="donut-chart">
+                                <div class="donut-center"></div>
+                            </div>
+                            <div class="donut-legend">
+                                <div class="legend-item">
+                                    <span class="legend-dot scope1"></span>
+                                    <span class="legend-name">Scope 1</span>
+                                    <span class="legend-pct">28%</span>
+                                </div>
+                                <div class="legend-item">
+                                    <span class="legend-dot scope2"></span>
+                                    <span class="legend-name">Scope 2</span>
+                                    <span class="legend-pct">47%</span>
+                                </div>
+                                <div class="legend-item">
+                                    <span class="legend-dot scope3"></span>
+                                    <span class="legend-name">Scope 3</span>
+                                    <span class="legend-pct">25%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Line/Area Chart Card -->
+                    <div class="chart-card">
+                        <div class="chart-header">
+                            <h5>Monthly Emissions Trend</h5>
+                            <p>tCO₂e per month — rolling 12 months</p>
+                        </div>
+                        <div class="trend-chart-container">
+                            <div class="y-axis-labels">
+                                <span>100t</span>
+                                <span>75t</span>
+                                <span>50t</span>
+                                <span>25t</span>
+                                <span>0</span>
+                            </div>
+                            <div class="trend-chart-wrapper">
+                                <svg class="trend-chart-svg" viewBox="0 0 500 180" preserveAspectRatio="none">
+                                    <defs>
+                                        <linearGradient id="chart-grad" x1="0" y1="0" x2="0" y2="1">
+                                            <stop offset="0%" stop-color="#10b981" stop-opacity="0.25"/>
+                                            <stop offset="100%" stop-color="#10b981" stop-opacity="0"/>
+                                        </linearGradient>
+                                    </defs>
+                                    <!-- Horizontal Grid Lines -->
+                                    <line x1="0" y1="36" x2="500" y2="36" stroke="#f1f5f9" stroke-width="1.5" />
+                                    <line x1="0" y1="72" x2="500" y2="72" stroke="#f1f5f9" stroke-width="1.5" />
+                                    <line x1="0" y1="108" x2="500" y2="108" stroke="#f1f5f9" stroke-width="1.5" />
+                                    <line x1="0" y1="144" x2="500" y2="144" stroke="#f1f5f9" stroke-width="1.5" />
+                                    
+                                    <!-- Area Fill Path -->
+                                    <path d="M 0 65 C 22.5 68.5, 22.5 72, 45 72 C 67.5 72, 67.5 55, 90 55 C 112.5 55, 112.5 85, 135 85 C 157.5 85, 157.5 92, 180 92 C 202.5 92, 202.5 88, 225 88 C 247.5 88, 247.5 100, 270 100 C 292.5 100, 292.5 105, 315 105 C 337.5 105, 337.5 95, 360 95 C 382.5 95, 382.5 98, 405 98 C 427.5 98, 427.5 110, 450 110 C 475 110, 475 120, 500 120 L 500 180 L 0 180 Z" fill="url(#chart-grad)" />
+                                    
+                                    <!-- Line Path -->
+                                    <path d="M 0 65 C 22.5 68.5, 22.5 72, 45 72 C 67.5 72, 67.5 55, 90 55 C 112.5 55, 112.5 85, 135 85 C 157.5 85, 157.5 92, 180 92 C 202.5 92, 202.5 88, 225 88 C 247.5 88, 247.5 100, 270 100 C 292.5 100, 292.5 105, 315 105 C 337.5 105, 337.5 95, 360 95 C 382.5 95, 382.5 98, 405 98 C 427.5 98, 427.5 110, 450 110 C 475 110, 475 120, 500 120" fill="none" stroke="#10b981" stroke-width="3" stroke-linecap="round" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="x-axis-labels">
+                            <span>Jan</span>
+                            <span>Feb</span>
+                            <span>Mar</span>
+                            <span>Apr</span>
+                            <span>May</span>
+                            <span>Jun</span>
+                            <span>Jul</span>
+                            <span>Aug</span>
+                            <span>Sep</span>
+                            <span>Oct</span>
+                            <span>Nov</span>
+                            <span>Dec</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Methodology Section -->
+    <section class="methodology-section" id="methodology">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-label">Our Process</span>
+                <h2 class="section-title">Assessment Methodology</h2>
+                <div class="title-bar"></div>
+                <p class="section-desc">
+                    CarbonTrack leverages environmental frameworks established by the Intergovernmental Panel on Climate Change (IPCC) and the EPA to guarantee analytical accuracy.
+                </p>
+            </div>
+
+            <!-- Interactive visual timeline -->
+            <div class="timeline-container">
+                <div class="timeline-line"></div>
+                
+                <!-- Step 1 -->
+                <div class="timeline-step active" data-step="1">
+                    <div class="timeline-marker">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="timeline-icon">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                            <polyline points="7 10 12 15 17 10"></polyline>
+                            <line x1="12" y1="15" x2="12" y2="3"></line>
+                        </svg>
+                    </div>
+                    <div class="timeline-content card">
+                        <span class="step-badge">Step 01</span>
+                        <h3>Data Collection</h3>
+                        <p>User logs daily variables including energy utility bills, transport fuels, dietary profiles, and recycling habits securely into the engine.</p>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="timeline-step" data-step="2">
+                    <div class="timeline-marker">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="timeline-icon">
+                            <rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect>
+                            <line x1="9" y1="9" x2="15" y2="15"></line>
+                            <line x1="15" y1="9" x2="9" y2="15"></line>
+                        </svg>
+                    </div>
+                    <div class="timeline-content card">
+                        <span class="step-badge">Step 02</span>
+                        <h3>Emission Calculation</h3>
+                        <p>Our processing layer maps inputs against localized carbon coefficients (e.g., eGRID regional grid emissions, EPA transport fuel density tables).</p>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="timeline-step" data-step="3">
+                    <div class="timeline-marker">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="timeline-icon">
+                            <path d="M21.21 15.89A10 10 0 1 1 8 2.83"></path>
+                            <path d="M22 12A10 10 0 0 0 12 2v10z"></path>
+                        </svg>
+                    </div>
+                    <div class="timeline-content card">
+                        <span class="step-badge">Step 03</span>
+                        <h3>Statistical Analysis</h3>
+                        <p>Data aggregates to categorize sources (scopes 1, 2, and 3 emissions) and benchmarks profiles against global climate reduction agreements.</p>
+                    </div>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="timeline-step" data-step="4">
+                    <div class="timeline-marker">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="timeline-icon">
+                            <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+                            <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+                        </svg>
+                    </div>
+                    <div class="timeline-content card">
+                        <span class="step-badge">Step 04</span>
+                        <h3>Recommendations</h3>
+                        <p>AI heuristics supply personalized action plans—like micro-offset investments, solar installation timelines, and low-carb habits.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Methodology Details Panel (Changes dynamically depending on active step click) -->
+            <div class="methodology-details-panel glass-card text-center" id="methodology-details">
+                <h4 id="detail-title">Data Collection Deep-Dive</h4>
+                <p id="detail-desc">Our primary ledger ingests data variables via API hooks. Users can hook smart meters or upload utility statement sheets to automate calculations. All metrics conform to standard equivalent mass parameters of Carbon Dioxide (CO₂e).</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section" id="features">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-label">Platform Capabilities</span>
+                <h2 class="section-title">Everything you need for institutional carbon accounting</h2>
+                <div class="title-bar"></div>
+                <p class="section-desc">
+                    Six purpose-built modules that cover the full lifecycle — from data ingestion to standards-aligned reporting.
+                </p>
+            </div>
+
+            <div class="grid grid-3">
+                <!-- Feature 1 -->
+                <div class="feature-card glass-card scroll-reveal">
+                    <div class="feature-header">
+                        <div class="feature-icon bg-green">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon">
+                                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                            </svg>
+                        </div>
+                        <h3>Scope 1, 2 & 3 Tracking</h3>
+                    </div>
+                    <p>Track direct combustion, purchased energy, and full value-chain emissions across every category defined by the GHG Protocol.</p>
+                    <div class="hover-decoration"></div>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="feature-card glass-card scroll-reveal">
+                    <div class="feature-header">
+                        <div class="feature-icon bg-blue">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon">
+                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                                <line x1="9" y1="3" x2="9" y2="21"></line>
+                                <line x1="17" y1="3" x2="17" y2="21"></line>
+                                <line x1="3" y1="9" x2="21" y2="9"></line>
+                                <line x1="3" y1="15" x2="21" y2="15"></line>
+                            </svg>
+                        </div>
+                        <h3>Automated Carbon Inventory</h3>
+                    </div>
+                    <p>Activity data automatically flows into scope-classified inventories — no manual spreadsheets, no calculation errors.</p>
+                    <div class="hover-decoration"></div>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="feature-card glass-card scroll-reveal">
+                    <div class="feature-header">
+                        <div class="feature-icon bg-emerald">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon">
+                                <path d="M3 3v18h18"></path>
+                                <polyline points="18.7 8 13.7 13 10.9 10.2 7 14.3"></polyline>
+                            </svg>
+                        </div>
+                        <h3>Dashboard Analytics</h3>
+                    </div>
+                    <p>Executive dashboards with real-time KPIs, scope-wise breakdowns, monthly trends, and comparative benchmarking.</p>
+                    <div class="hover-decoration"></div>
+                </div>
+
+                <!-- Feature 4 -->
+                <div class="feature-card glass-card scroll-reveal">
+                    <div class="feature-header">
+                        <div class="feature-icon bg-teal">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                <polyline points="14 2 14 8 20 8"></polyline>
+                                <line x1="16" y1="13" x2="8" y2="13"></line>
+                                <line x1="16" y1="17" x2="8" y2="17"></line>
+                            </svg>
+                        </div>
+                        <h3>Report Generation</h3>
+                    </div>
+                    <p>Generate audit-ready CO₂e reports aligned to ISO 14064-1, GHG Protocol, and internal ESG disclosure requirements.</p>
+                    <div class="hover-decoration"></div>
+                </div>
+
+                <!-- Feature 5 -->
+                <div class="feature-card glass-card scroll-reveal">
+                    <div class="feature-header">
+                        <div class="feature-icon bg-orange">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon">
+                                <path d="M9 21h6"></path>
+                                <path d="M9 17h6"></path>
+                                <path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17h8v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7z"></path>
+                            </svg>
+                        </div>
+                        <h3>AI Recommendations</h3>
+                    </div>
+                    <p>Context-aware reduction insights that surface the highest-impact opportunities based on your emissions profile.</p>
+                    <div class="hover-decoration"></div>
+                </div>
+
+                <!-- Feature 6 -->
+                <div class="feature-card glass-card scroll-reveal">
+                    <div class="feature-header">
+                        <div class="feature-icon bg-purple">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                            </svg>
+                        </div>
+                        <h3>Institutional Data Management</h3>
+                    </div>
+                    <p>Role-based access, department-wise data ownership, and secure audit trails engineered for multi-campus institutions.</p>
+                    <div class="hover-decoration"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Privacy Policy Overview Section -->
+    <section class="privacy-section" id="privacy">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-label">Trust & Security</span>
+                <h2 class="section-title">Institution-grade data governance</h2>
+                <div class="title-bar"></div>
+                <p class="section-desc">
+                    Purpose-built controls that keep sensitive institutional data secure, auditable, and compliant.
+                </p>
+            </div>
+
+            <div class="privacy-grid glass-card scroll-reveal">
+                <div class="privacy-graphic">
+                    <svg viewBox="0 0 200 200" class="shield-illustration" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="100" cy="100" r="80" fill="url(#shield-bg-grad)" />
+                        <!-- Shield -->
+                        <path d="M100 45 C 115 45, 140 40, 145 35 C 145 60, 145 105, 100 150 C 55 105, 55 60, 55 35 C 60 40, 85 45, 100 45 Z" fill="#10B981" fill-opacity="0.2" stroke="#34D399" stroke-width="4"/>
+                        <!-- Lock Icon inside Shield -->
+                        <rect x="85" y="90" width="30" height="22" rx="3" fill="#3B82F6"/>
+                        <path d="M90 90 V 78 A 10 10 0 0 1 110 78 V 90" stroke="#3B82F6" stroke-width="3.5" fill="none"/>
+                        <circle cx="100" cy="101" r="3" fill="white"/>
+                        <path d="M100 104 V 108" stroke="white" stroke-width="2"/>
+                        <!-- Ambient Sparkles -->
+                        <circle cx="45" cy="70" r="3" fill="#6EE7B7" class="sparkle"/>
+                        <circle cx="150" cy="130" r="4" fill="#60A5FA" class="sparkle fast"/>
+                        <defs>
+                            <radialGradient id="shield-bg-grad" cx="50%" cy="50%" r="50%">
+                                <stop offset="0%" stop-color="#1E293B" stop-opacity="0.8"/>
+                                <stop offset="100%" stop-color="#0F172A" stop-opacity="0.95"/>
+                            </radialGradient>
+                        </defs>
+                    </svg>
+                </div>
+                <div class="privacy-info">
+                    <div class="privacy-item">
+                        <div class="privacy-icon-box">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="privacy-item-icon">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                            </svg>
+                        </div>
+                        <div class="privacy-text">
+                            <h4>Institution Data Security</h4>
+                            <p>All institutional data is encrypted in transit (TLS 1.3) and at rest (AES-256). Segmented by tenant with zero cross-institution exposure.</p>
+                        </div>
+                    </div>
+                    <div class="privacy-item">
+                        <div class="privacy-icon-box">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="privacy-item-icon">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="9" cy="7" r="4"></circle>
+                                <path d="M16 11l2 2 4-4"></path>
+                            </svg>
+                        </div>
+                        <div class="privacy-text">
+                            <h4>Role-Based Access Control</h4>
+                            <p>Granular permissions for administrators, sustainability officers, department heads, and auditors — every action is scoped to a role.</p>
+                        </div>
+                    </div>
+                    <div class="privacy-item">
+                        <div class="privacy-icon-box">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="privacy-item-icon">
+                                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                            </svg>
+                        </div>
+                        <div class="privacy-text">
+                            <h4>Encrypted Records</h4>
+                            <p>Utility bills, invoices, and activity logs are stored as encrypted records — no data ever leaves your compliance boundary.</p>
+                        </div>
+                    </div>
+                    <div class="privacy-item">
+                        <div class="privacy-icon-box">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="privacy-item-icon">
+                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                                <line x1="9" y1="9" x2="15" y2="9"></line>
+                                <line x1="9" y1="13" x2="15" y2="13"></line>
+                                <line x1="9" y1="17" x2="15" y2="17"></line>
+                            </svg>
+                        </div>
+                        <div class="privacy-text">
+                            <h4>Full Audit Trail</h4>
+                            <p>Every data entry, edit, calculation, and report export is logged with timestamp and user attribution for defensible reporting.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Login Section -->
+    <section class="login-section" id="login">
+        <div class="container">
+            <div class="login-wrapper">
+                <div class="card login-card glass-card scroll-reveal">
+                    <div class="login-header">
+                        <div class="logo">
+                            <svg class="logo-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 3.5 1 8.5C18.4 18 14.5 20 11 20z"></path>
+                            </svg>
+                            <span>Carbon<span>Track</span></span>
+                        </div>
+                        <h3>Welcome Back</h3>
+                        <p>Access your personal carbon assessment tracker</p>
+                    </div>
+
+                    <form class="login-form" id="login-form">
+                        <div class="form-control">
+                            <label for="login-email">Email Address</label>
+                            <input type="email" id="login-email" required placeholder="name@domain.com">
+                        </div>
+                        <div class="form-control">
+                            <label for="login-password">Password</label>
+                            <input type="password" id="login-password" required placeholder="••••••••">
+                        </div>
+                        
+                        <div class="login-actions-row">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="remember-me">
+                                <span>Remember me</span>
+                            </label>
+                            <a href="#" class="forgot-pass">Forgot password?</a>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-block">Sign In</button>
+                    </form>
+
+                    <div class="divider">
+                        <span>or continue with</span>
+                    </div>
+
+                    <button class="btn btn-google btn-block" id="btn-google-login">
+                        <svg class="google-icon" viewBox="0 0 24 24" width="18" height="18" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+                            <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+                            <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z" fill="#FBBC05"/>
+                            <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z" fill="#EA4335"/>
+                        </svg>
+                        Sign in with Google
+                    </button>
+                    
+                    <div class="login-footer-text">
+                        Don't have a profile yet? <a href="#">Create account</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Toast Notification System -->
+    <div class="toast-container" id="toast-container"></div>
+
+    <!-- Modal Success Popup -->
+    <div class="modal-overlay" id="modal-overlay">
+        <div class="modal-card glass-card">
+            <div class="modal-icon bg-green">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+            </div>
+            <h3 id="modal-title">Success</h3>
+            <p id="modal-message">Your operations executed correctly.</p>
+            <button class="btn btn-primary" id="modal-close-btn">Dismiss</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Info Column -->
+                <div class="footer-col brand-col">
+                    <a href="#home" class="logo">
+                        <svg class="logo-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 3.5 1 8.5C18.4 18 14.5 20 11 20z"></path>
+                        </svg>
+                        <span>Carbon<span>Track</span></span>
+                    </a>
+                    <p class="quote">"Small actions create a greener future."</p>
+                    <p class="footer-about">An academic research portal focused on localized carbon indices and smart consumption models.</p>
+                </div>
+
+                <!-- Navigation Column -->
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Platform</a></li>
+                        <li><a href="calculator.html">Footprint Calculator</a></li>
+                        <li><a href="#methodology">Our Methodology</a></li>
+                        <li><a href="#features">Core Features</a></li>
+                        <li><a href="#privacy">Privacy Governance</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contacts Column -->
+                <div class="footer-col">
+                    <h4>Contact & Research</h4>
+                    <ul class="footer-contact">
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="footer-icon">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                            <span>research@carbontrack.org</span>
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="footer-icon">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                            <span>University Research Hub, Campus Green</span>
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="footer-icon">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                            </svg>
+                            <span>+1 (555) 234-9876</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Copyright area -->
+            <div class="footer-bottom">
+                <div>&copy; 2026 CarbonTrack Platform. Developed for the Environmental Sciences Research Project. All rights reserved.</div>
+                <div class="footer-socials">
+                    <a href="#" aria-label="Github Link">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                    </a>
+                    <a href="#" aria-label="Twitter Link">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ESG Audit Export Modal -->
+    <div class="audit-modal-overlay" id="audit-modal-overlay" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(15, 23, 42, 0.75); z-index: 9999; align-items: center; justify-content: center; backdrop-filter: blur(8px); transition: opacity 0.3s ease;">
+        <div class="audit-modal glass-card" style="background: var(--white); max-width: 500px; width: 90%; border-radius: 24px; padding: 36px; text-align: center; box-shadow: 0 20px 50px rgba(0,0,0,0.15); border: 1px solid rgba(0,0,0,0.08); transform: translateY(20px); transition: transform 0.3s ease;">
+            <div class="audit-loader" id="audit-loader">
+                <div class="spinner" style="width: 60px; height: 60px; border: 4px solid rgba(16, 185, 129, 0.1); border-top-color: #10b981; border-radius: 50%; animation: spin 1s linear infinite; margin: 0 auto 24px;"></div>
+                <h3 style="font-size: 1.4rem; color: var(--dark); margin-bottom: 12px; font-weight: 700;">Simulating Audit Reporting Ledger</h3>
+                <p class="loader-status" id="loader-status" style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 0;">Connecting to GHG Protocol factors API...</p>
+            </div>
+            
+            <div class="audit-success-layout" id="audit-success-layout" style="display: none;">
+                <div class="success-icon-box" style="width: 64px; height: 64px; background: #f0fdf4; color: #10b981; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; border: 2px solid rgba(16, 185, 129, 0.25);">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                </div>
+                <h3 style="font-size: 1.4rem; color: var(--dark); margin-bottom: 8px; font-weight: 700;">Audit Report Prepared!</h3>
+                <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 24px;">All scope activity ledgers successfully mapped and verified against ISO 14064-1 standards.</p>
+                <div class="audit-details-card" style="background: var(--light-bg); border-radius: 12px; padding: 16px; margin-bottom: 24px; text-align: left; font-size: 0.85rem; border: 1px solid rgba(0,0,0,0.04); color: var(--dark);">
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+                        <span style="color: var(--text-secondary);">Total Carbon Footprint:</span>
+                        <strong id="audit-modal-total">29.07 tCO₂e</strong>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+                        <span style="color: var(--text-secondary);">Sector Profile Benchmark:</span>
+                        <strong id="audit-modal-benchmark">Tech Office (35.00 t)</strong>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+                        <span style="color: var(--text-secondary);">Performance Index:</span>
+                        <strong id="audit-modal-index" style="color: #10b981;">17% below standard</strong>
+                    </div>
+                    <div style="display: flex; justify-content: space-between;">
+                        <span style="color: var(--text-secondary);">Verification Status:</span>
+                        <strong style="color: #10b981; display: flex; align-items: center; gap: 4px;">
+                            <span class="live-dot" style="width: 6px; height: 6px; position: static; animation: pulse 1.8s infinite; background-color: #10b981; border-radius: 50%;"></span> GHG Verified
+                        </strong>
+                    </div>
+                </div>
+                <div style="display: flex; gap: 12px; justify-content: center;">
+                    <button class="btn btn-primary" id="btn-modal-print" style="padding: 10px 20px; font-size: 0.9rem;">Print Report</button>
+                    <button class="btn btn-secondary" id="btn-modal-close" style="padding: 10px 20px; font-size: 0.9rem; background: transparent; border: 1px solid rgba(0,0,0,0.15); color: var(--text-secondary);">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+    <script src="chatbot.js" defer></script>
+</body>
+</html>
