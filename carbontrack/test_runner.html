@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CarbonTrack Report Generator Test Runner</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Sora:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * { box-sizing: border-box; }
+        body {
+            background: #ffffff;
+            margin: 0;
+            padding: 0;
+            font-family: Calibri, 'Outfit', Arial, sans-serif;
+        }
+        @page {
+            size: A4 portrait;
+            margin: 0;
+        }
+        .report-page {
+            page-break-after: always;
+            break-after: page;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Mock DOM Inputs for Testing matching SNJB profile -->
+    <div id="mock-form" style="display: none;">
+        <input id="org-name" value="Shri Hiralal Hastimal (Jain Brothers, Jalgaon) Polytechnic">
+        <input id="org-address" value="SNJB Jain Gurukul Neminagar, Chandwad, Nashik - 423101, Maharashtra">
+        <input id="org-contact" value="+91 2556-252127">
+        <input id="org-email" value="principalpoly@snjb.org">
+        <input id="org-website" value="https://www.snjb.org">
+        <input id="org-total-area" value="4.0">
+        <input id="org-builtup-area" value="16187.40">
+        <input id="org-population" value="1420">
+        <input id="inst-num-students" value="1300">
+        <input id="inst-num-faculty-staff" value="120">
+        <input id="org-lat" value="20.33° N">
+        <input id="org-lng" value="74.23° E">
+        <input id="org-elevation" value="585">
+
+        <!-- Generator rows -->
+        <table id="generator-rows-container">
+            <tr>
+                <td><input class="generator-liters" value="17.5"></td>
+                <td><input class="generator-factor" value="2.684"></td>
+            </tr>
+        </table>
+
+        <!-- LPG rows -->
+        <table id="lpg-rows-container">
+            <tr>
+                <td><input class="lpg-cylinders" value="38.8"></td>
+                <td><input class="lpg-weight" value="19"></td>
+                <td><input class="lpg-factor" value="2.988"></td>
+            </tr>
+        </table>
+
+        <!-- Energy rows -->
+        <table id="energy-rows-container">
+            <tr>
+                <td><input class="energy-consumption" value="3952"></td>
+                <td><input class="energy-factor" value="0.792"></td>
+                <td><input class="energy-type" value="purchased-grid"></td>
+            </tr>
+        </table>
+
+        <!-- Paper rows -->
+        <table id="paper-rows-container">
+            <tr>
+                <td><input class="paper-kg" value="1090.9"></td>
+            </tr>
+        </table>
+
+        <!-- Vehicle rows -->
+        <table id="vehicle-rows-container">
+            <tr>
+                <td><input class="vehicle-type" value="bus"></td>
+                <td><input class="fuel-type" value="diesel"></td>
+                <td><input class="vehicle-ownership" value="student-owned"></td>
+                <td><input class="vehicle-count" value="4"></td>
+                <td><input class="vehicle-distance" value="45"></td>
+                <td><input class="vehicle-factor" value="5.74"></td>
+            </tr>
+            <tr>
+                <td><input class="vehicle-type" value="bike"></td>
+                <td><input class="fuel-type" value="petrol"></td>
+                <td><input class="vehicle-ownership" value="student-owned"></td>
+                <td><input class="vehicle-count" value="65"></td>
+                <td><input class="vehicle-distance" value="15"></td>
+                <td><input class="vehicle-factor" value="0.45"></td>
+            </tr>
+        </table>
+
+        <!-- Solar rows -->
+        <table id="solar-rows-container">
+            <tr>
+                <td><input class="solar-capacity" value="3300"></td>
+                <td><input class="solar-factor" value="0.792"></td>
+                <td><span class="solar-offset">2613.6</span></td>
+            </tr>
+        </table>
+
+        <!-- Tree rows -->
+        <table id="trees-rows-container">
+            <tr>
+                <td><input class="tree-species" value="neem"></td>
+                <td><input class="tree-count" value="110"></td>
+                <td><input class="tree-factor" value="21.77"></td>
+                <td><span class="tree-absorption">2394.7</span></td>
+            </tr>
+            <tr>
+                <td><input class="tree-species" value="peepal"></td>
+                <td><input class="tree-count" value="35"></td>
+                <td><input class="tree-factor" value="28.50"></td>
+                <td><span class="tree-absorption">997.5</span></td>
+            </tr>
+            <tr>
+                <td><input class="tree-species" value="banyan"></td>
+                <td><input class="tree-count" value="15"></td>
+                <td><input class="tree-factor" value="32.00"></td>
+                <td><span class="tree-absorption">480.0</span></td>
+            </tr>
+        </table>
+
+        <!-- Waste rows -->
+        <table id="waste-rows-container">
+            <tr>
+                <td><span class="waste-offset">140.34</span></td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- Container where the generated report will be rendered -->
+    <div id="report-output"></div>
+
+    <!-- Load report generator -->
+    <script src="report-generator.js"></script>
+    <script>
+        // Trigger report generation and pagination immediately for headless print
+        window.addEventListener('DOMContentLoaded', () => {
+            const model = window.buildReportDataModel();
+            console.log("Model built successfully:", model);
+
+            const aiResponse = {
+                isAIGenerated: false,
+                source: "CarbonTrack Deterministic Environmental Analytics Engine (Supabase Edge Function not configured)",
+                insights: window.generateDeterministicInsights(model)
+            };
+
+            const target = document.getElementById('report-output');
+            const reportHtml = window.buildAccreditedReportHTML(model, aiResponse);
+            target.innerHTML = reportHtml;
+
+            // Run post-render dynamic pagination & TOC mapping
+            window.paginateReport(target);
+            console.log("Report generated and paginated successfully. Total pages:", target.querySelectorAll('.report-page').length);
+            document.title = "READY_FOR_PRINT";
+        });
+    </script>
+</body>
+</html>
